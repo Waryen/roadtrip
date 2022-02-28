@@ -13,9 +13,11 @@ let stepRange = null;
 
 // total range calcul
 function totalRangeCal(steps) {
-  let ranges = steps.map((step) => step.range);
-  // FIXME: this is buggy
-  return ranges.reduce((prev, curr) => prev + curr, ranges[0]);
+  const ranges = steps.map((step) => step.range);
+  return ranges.reduce(
+    (prev, curr) => parseInt(prev) + parseInt(curr),
+    ranges[0]
+  );
 }
 
 // listeners
@@ -25,17 +27,14 @@ function resetSteps() {
 }
 
 function stepNameListener(e) {
-  console.log("name");
   stepName = e.target.value;
 }
 
 function stepRangeListener(e) {
-  console.log("range");
   stepRange = e.target.value;
 }
 
 function addStepListener(e) {
-  console.log("add");
   e.preventDefault();
   const newStep = {
     name: stepName,
@@ -53,13 +52,13 @@ function addStepListener(e) {
 
 // check if there is a steps list already existing on document load
 localList = window.localStorage.getItem("steps-list");
-oldList = JSON.parse(localList);
-if (!oldList || oldList.length == 0) {
+if (!localList || localList.length == 0) {
   const empty = "Il n'y a pas encore d'étapes enregistrées.";
   const node = stepsList.appendChild(document.createElement("p"));
   node.textContent = empty;
   totalRangeEl.textContent = "0 km";
 } else {
+  oldList = JSON.parse(localList);
   oldList.map((step) => {
     const li = document.createElement("li");
     const name = document.createElement("p");

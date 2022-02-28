@@ -10,6 +10,7 @@ ol {
 li {
   display: flex;
   border: 2px solid #000;
+  margin: 3px;
 }
 
 li p {

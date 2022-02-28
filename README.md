@@ -26,4 +26,4 @@ La distance totale parcourue doit être affichée et mise à jour en-dessous de 
 
 Afin de pouvoir sauvegarder les données, celles-ci seront enregistrées dans le [localStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage).
 
-L'utilisateur aura également la possiblité de supprimer une étape en cliquant dessus dans la liste ou de réinitialiser son roadtrip via le boutton sous la liste.
+L'utilisateur aura également la possiblité de réinitialiser son roadtrip via un boutton sous la liste.
