@@ -1,0 +1,17 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+ol {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: 1rem;
+}
+
+li {
+  display: flex;
+  border: 2px solid #000;
+}
+
+li p {
+  padding: 0.5rem;
+}
