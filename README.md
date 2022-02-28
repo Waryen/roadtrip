@@ -32,4 +32,4 @@ L'utilisateur aura également la possiblité de réinitialiser son roadtrip via 
 
 Une branche "solution" est disponible en cas de problèmes (uniquement pour le HTML/JS, pas le CSS).
 
-Il existe cependant plusieurs manières d'atteindre l'object de l'exercice.
+Il existe cependant plusieurs manières d'atteindre l'objectif de l'exercice.
