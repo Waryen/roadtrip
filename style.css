@@ -1,0 +1,27 @@
+:root{
+    --Black: #000000;
+    --White: #FFFFFF;
+    --Pink: #F06A6A;
+    --Black2: #1A1A1A;
+    --Green: #93F67A;
+    --Grey: #ECECEC;
+}
+
+body {
+    background-color: var(--Black2);
+    color: var(--White);
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+/*  */
+/* LEFT PANNEL */
+/*  */
+.left {}
+h1{}
+form{}
+.title{}
+.inputName{}
+.inputDistance{}
+.submit
