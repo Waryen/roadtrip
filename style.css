@@ -7,6 +7,7 @@
     --Black2: #1A1A1A;
     --Green: #93F67A;
     --Grey: #ECECEC;
+    --Blue: #6faef8;
 }
 
 body {
@@ -42,6 +43,7 @@ input {
     width: 250px;
     height: 50px;
     margin: 1rem;
+    font-size: 1.25rem;
 }
 
 .name{
@@ -49,7 +51,10 @@ input {
     flex-direction: column;
 }
 .titleDame{}
-.inputName{}
+.inputName{
+    
+    font-size: 1.25rem;
+}
 
 .distance{
     display: flex;
@@ -79,20 +84,50 @@ input {
 .frame{
     width: 30vw;
     color: #000000;
+    margin-bottom: 1rem;
 }
 .etape{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #FFFFFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 .container{
     background-color: #FFFFFF;
+    padding: 1rem;
+}
+
+.city{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--Grey);
+    margin-bottom: 1rem;
+}
+
+.city:hover{
+    background-color: var(--Pink);
 }
 
 [class="1"]{
-    display: flex;
 }
-[class="2"]{}
-.buttons
-.total{}
-.reinit{}
+[class="2"]{
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.total{
+    width: 45%;
+    border: none;
+    background-color: var(--Blue);
+    font-size: 1.1rem;
+}
+.reinit{
+    width: 45%;
+    border: none;
+    background-color: var(--Pink);
+    font-size: 1.1rem;
+}
