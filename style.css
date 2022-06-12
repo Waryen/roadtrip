@@ -69,11 +69,29 @@ input {
 /*  */
 /* RIGHT PANEL */
 /*  */
-.right{}
-.frame{}
-.etape{}
-.container{}
-[class="1"]{}
+.right{
+    margin-top: 7%;
+}
+.right h1 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+.frame{
+    width: 30vw;
+    color: #000000;
+}
+.etape{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+}
+.container{
+    background-color: #FFFFFF;
+}
+
+[class="1"]{
+    display: flex;
+}
 [class="2"]{}
 .buttons
 .total{}
