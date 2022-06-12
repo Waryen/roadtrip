@@ -10,14 +10,24 @@
   </head>
   <body>
     <div class="left">
+
       <h1>Roadtrip</h1>
-      <form action="/form">
-        <label class="title" for="fname">Nom de l'étape</label>
-        <input type="text" class="name" name="fname"><br><br>
-        <label class="distance" for="lname">Distance parcourue</label>
-        <input type="text" id="distance" name="lname"><br><br>
-        <input type="submit" value="Ajouter">
+
+        <form method="get" id="form1" action="something.php">
+
+        <div class="name">
+          <label class="titleName" for="fname">Nom de l'étape</label>
+          <input type="text" class="inputName" name="fname"><br><br>
+        </div>
+
+        <div class="distance">
+          <label class="titleDistance" for="lname">Distance parcourue</label>
+          <input type="text" class="inputDistance" name="lname"><br><br>
+        </div>
+        
       </form> 
+  <button type="submit" form="form1">Ajouter</button>
+
     </div>
 
     <div class="right">
@@ -43,8 +53,8 @@
 
       <div class="buttons">
         <!-- make a function to convert to miles -->
-       <button type="button" onclick="Miles()">Total: 484 km</button> 
-      <button type="button" onclick="">Réinitialiser</button>
+       <button class="total" type="button" onclick="Miles()">Total: 484 km</button> 
+      <button class="reinit" type="button" onclick="">Réinitialiser</button>
     </div>
     </div>
   </body>
