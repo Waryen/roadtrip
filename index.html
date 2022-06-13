@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./src/app.js" defer></script>
+    <script src="app.js" defer></script>
     <title>Roadtrip</title>
   </head>
   <body>
@@ -13,20 +13,20 @@
 
       <h1>Roadtrip</h1>
 
-        <form method="get" id="form1" action="something.php">
+        <form method="get" id="form1">
 
         <div class="name">
           <label class="titleName" for="fname">Nom de l'étape</label>
-          <input type="text" class="inputName" name="fname"><br><br>
+          <input type="text" class="inputName" name="fname" id="Name"><br><br>
         </div>
 
         <div class="distance">
           <label class="titleDistance" for="lname">Distance parcourue</label>
-          <input type="text" class="inputDistance" name="lname"><br><br>
+          <input type="text" class="inputDistance" name="lname" id="Distance"><br><br>
         </div>
         
       </form> 
-  <button type="submit" form="form1">Ajouter</button>
+  <button id ="submit" type="submit" form="form1">Ajouter</button>
 
     </div>
 
