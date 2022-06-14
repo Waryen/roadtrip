@@ -34,3 +34,15 @@ document.getElementById('form1').addEventListener("submit", (e) => {
 
     addCities(NameValue, DistValue)
 })
+
+document.getElementById('reinit').addEventListener("click", (e) => {
+    console.log('test')
+
+    // "Il faut manipuler le local avant de réinitialiser le storage !", -JCVD
+})
+
+// let nameStorage = JSON.parse(window.localStorage.getItem('Name'))
+// let distStorage = JSON.parse(window.localStorage.getItem('Distance'))
+
+// localStorage.setItem("Name", NameValue);
+// localStorage.setItem("Distance", DistValue);

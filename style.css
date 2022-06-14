@@ -131,3 +131,9 @@ input {
     background-color: var(--Pink);
     font-size: 1.1rem;
 }
+
+@media only screen and (max-width: 880) {
+    html {
+      max-width: 100vw;
+    }
+  }
