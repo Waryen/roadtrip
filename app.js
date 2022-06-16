@@ -1,3 +1,6 @@
+let collection = JSON.parse(window.localStorage.getItem('collection'))
+window.localStorage.setItem('collection', JSON.stringify(collection))
+
 let NameValue = document.getElementById("Name").value;
 let DistValue = document.getElementById("Distance").value;
 
@@ -21,6 +24,16 @@ function addCities(name, distance) {
 
     container.appendChild(div)
 
+    let input = {
+        Name: NameValue,
+        Distance: DistValue,
+      }
+      collection.push(input)
+
+      window.localStorage.setItem('collection', JSON.stringify(collection))
+      window.localStorage.setItem('collection', JSON.stringify(collection))
+      window.location.reload();
+
 }
 
 document.getElementById('form1').addEventListener("submit", (e) => {
@@ -33,10 +46,13 @@ document.getElementById('form1').addEventListener("submit", (e) => {
     console.log(DistValue)
 
     addCities(NameValue, DistValue)
+    localStorage.setItem("Name", NameValue);
+    localStorage.setItem("Distance", DistValue);
 })
 
 document.getElementById('reinit').addEventListener("click", (e) => {
-    console.log('test')
+    window.localStorage.removeItem('collection')
+    window.location.reload();
 
     // "Il faut manipuler le local avant de réinitialiser le storage !", -JCVD
 })
@@ -46,3 +62,6 @@ document.getElementById('reinit').addEventListener("click", (e) => {
 
 // localStorage.setItem("Name", NameValue);
 // localStorage.setItem("Distance", DistValue);
+
+// window.localStorage.removeItem('collection')
+// window.location.reload();
