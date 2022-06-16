@@ -1,10 +1,16 @@
-let collection = JSON.parse(window.localStorage.getItem('collection'))
-window.localStorage.setItem('collection', JSON.stringify(collection))
+let collection = window.localStorage.getItem('collection')
 
 let NameValue = document.getElementById("Name").value;
 let DistValue = document.getElementById("Distance").value;
 
-function addCities(name, distance) {
+
+function updateDistance(distance) {
+    let display = document.querySelector('.displayDist')
+    display.innerHTML = ": " + distance + " km"
+}
+
+
+function addCities() {
     container = document.getElementById('container')
 
     let div = document.createElement("div")
@@ -24,16 +30,18 @@ function addCities(name, distance) {
 
     container.appendChild(div)
 
-    let input = {
-        Name: NameValue,
-        Distance: DistValue,
-      }
-      collection.push(input)
+    // let input = {
+    //     Name: NameValue,
+    //     Distance: DistValue,
+    //   }
+    //   collection.push(input)
 
-      window.localStorage.setItem('collection', JSON.stringify(collection))
-      window.localStorage.setItem('collection', JSON.stringify(collection))
-      window.location.reload();
+    //   window.localStorage.setItem('collection', JSON.stringify(collection))
+    //   window.localStorage.setItem('collection', JSON.stringify(collection))
+    //   window.location.reload();
 
+      distTotal = "test"
+      updateDistance(distTotal)
 }
 
 document.getElementById('form1').addEventListener("submit", (e) => {
@@ -53,9 +61,40 @@ document.getElementById('form1').addEventListener("submit", (e) => {
 document.getElementById('reinit').addEventListener("click", (e) => {
     window.localStorage.removeItem('collection')
     window.location.reload();
-
     // "Il faut manipuler le local avant de réinitialiser le storage !", -JCVD
 })
+
+// function localSync() {
+//     // for (let index = 0; index < array.length; index++) {
+//     //     const element = array[index];
+//     //     let collection = JSON.parse(window.localStorage.getItem('collection'))
+//     //     let nameStorage = JSON.parse(window.localStorage.getItem('collection[Name]'))
+//     //     let distStorage = JSON.parse(window.localStorage.getItem('collection[Distance]'))
+
+
+//     //     container = document.getElementById('container')
+
+//     //     let div = document.createElement("div")
+//     //     let pname = document.createElement("p")
+//     //     let pdist = document.createElement("p")
+    
+//     //     let nameInput = document.createTextNode(NameValue)
+//     //     let distInput = document.createTextNode(DistValue)
+    
+//     //     pname.appendChild(nameInput)
+//     //     pdist.appendChild(distInput)
+    
+//     //     div.appendChild(pname)
+//     //     div.appendChild(pdist)
+        
+//     //     div.classList.add('city')
+    
+//         container.appendChild(div)
+        
+//     }
+// }
+
+// localSync()
 
 // let nameStorage = JSON.parse(window.localStorage.getItem('Name'))
 // let distStorage = JSON.parse(window.localStorage.getItem('Distance'))
@@ -65,3 +104,4 @@ document.getElementById('reinit').addEventListener("click", (e) => {
 
 // window.localStorage.removeItem('collection')
 // window.location.reload();
+
