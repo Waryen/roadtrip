@@ -22,6 +22,7 @@ function addCities() {
 
     pname.appendChild(nameInput)
     pdist.appendChild(distInput)
+    pdist.classList.add('distance')
 
     div.appendChild(pname)
     div.appendChild(pdist)
@@ -40,8 +41,9 @@ function addCities() {
     //   window.localStorage.setItem('collection', JSON.stringify(collection))
     //   window.location.reload();
 
-      distTotal = "test"
-      updateDistance(distTotal)
+    let total = 0;  
+    document.querySelectorAll('.distane').forEach(el=>total+=+el.value);
+      updateDistance(total)
 }
 
 document.getElementById('form1').addEventListener("submit", (e) => {
