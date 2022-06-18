@@ -96,6 +96,7 @@ input {
 .container{
     background-color: #FFFFFF;
     padding: 1rem;
+    min-height: 30vh;
 }
 
 .city{
