@@ -62,23 +62,17 @@ if (!localList || localList.length == 0) {
 } else {
   oldList = JSON.parse(localList);
   oldList.map((step) => {
-    let div = document.createElement("div")
-    let pname = document.createElement("p")
-    let pdist = document.createElement("p")
+    const li = document.createElement("div");
+    const name = document.createElement("p");
+    const range = document.createElement("p");
 
-    let nameInput = document.createTextNode(NameValue)
-    let distInput = document.createTextNode(DistValue)
+    name.textContent = step.name;
+    range.textContent = step.range;
 
-    pname.appendChild(nameInput)
-    pdist.appendChild(distInput)
-    pdist.classList.add('distance')
-
-    div.appendChild(pname)
-    div.appendChild(pdist)
-    
-    div.classList.add('city')
-
-    stepsList.appendChild(div);
+    li.appendChild(name);
+    li.appendChild(range);
+    li.classList.add('city')
+    stepsList.appendChild(li);
   });
   totalRangeEl.textContent = `${totalRangeCal(oldList)} km`;
 }
