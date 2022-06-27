@@ -10,12 +10,10 @@ let oldList = null;
 let stepName = null;
 let stepRange = null;
 
-
 function totalRangeCal(steps) {
     const ranges = steps.map((step) => step.range);
     return ranges.reduce(
-      (prev, curr) => parseInt(prev) + parseInt(curr),
-      ranges[0]
+      (prev, curr) => parseInt(prev) + parseInt(curr)
     );
   }
 
@@ -25,13 +23,6 @@ document.getElementById('form1').addEventListener("submit", (e) => {
     NameValue = document.getElementById("Name").value;
     DistValue = document.getElementById("Distance").value;
 
-    console.log(NameValue)
-    console.log(DistValue)
-
-    localStorage.setItem("Name", NameValue);
-    localStorage.setItem("Distance", DistValue);
-
-    e.preventDefault();
   const newStep = {
     name: NameValue,
     range: DistValue,
